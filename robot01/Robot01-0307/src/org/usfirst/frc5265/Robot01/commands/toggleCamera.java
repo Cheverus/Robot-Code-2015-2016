@@ -5,7 +5,8 @@ import org.usfirst.frc5265.Robot01.Robot;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class toggleCamera extends Command {
-
+// This code is a toggle that just tells robot.java to change to the other camera
+	
 	public toggleCamera () {
 		
 	}
