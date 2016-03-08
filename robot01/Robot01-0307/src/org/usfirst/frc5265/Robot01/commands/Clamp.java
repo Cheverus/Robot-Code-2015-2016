@@ -70,11 +70,11 @@ public class Clamp extends Command {
         }
         
         public void log() {
-       	 shooterPower = SmartDashboard.getNumber("shooter power", -0.3);
+       	 shooterPower = SmartDashboard.getNumber("clamp power", -0.3);
 
-        	shooterTime = SmartDashboard.getNumber("shooter time", 1);
+        	shooterTime = SmartDashboard.getNumber("clamp time", 1);
         	
-        	SmartDashboard.putNumber("shooter power", -0.3);
-        	SmartDashboard.putNumber("shooter time", 1);
+        	SmartDashboard.putNumber("clamp power", -0.3);
+        	SmartDashboard.putNumber("clamp time", 1);
         }
     }
