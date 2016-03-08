@@ -80,7 +80,8 @@ public class OI {
         buttonSpin.whenPressed(new BrushOn());
         flipCamera = new JoystickButton(driveStick, 9);
         flipCamera.whenPressed(new toggleCamera());
-        
+        gateDown = new JoystickButton(driveStick, 10);
+        gateDown.whileHeld(new Clamp());
         // disabled the below - they weren't ready to deploy and put errors on the dashboard
         //
         /*autonomus = new JoystickButton(driveStick, 32);
@@ -107,7 +108,7 @@ public class OI {
         SmartDashboard.putData("Shoot", new Shoot());
         SmartDashboard.putData("AutonomousGroup", new AutonomousGroup());
         SmartDashboard.putData("LiftGateUp", new LiftGateUp());
-        SmartDashboard.putData("LiftGateDown", new Clamp());
+        SmartDashboard.putData("Clamp", new Clamp());
         SmartDashboard.putData("Reset Ball", new ResetBall());
         SmartDashboard.putData("LiftGate", new LiftGate());
         SmartDashboard.putData("LiftGateOff", new LiftGateOff());
