@@ -41,27 +41,28 @@ public static int fingerToggle;
 
     // Called just before this Command runs the first time
     protected void initialize() {
-//    	Robot.gateLifter.up();
+    // -1,0,1,2 are values for fingerButtonToggle, cycling through all four values
+    // 0 and 2 are OFF, -1 is down, 1 is up
+    // gatelifter.java will stop the up and down motion by the pot value
+    // we test for the stop state here in case the pot isn't working properly
+    //
+    // this button should trigger the toggle to the next integer
+    // and retrieve that value for testing
     fingerToggle = GateLifter.fingerButtonToggle();
 
    	if (fingerToggle == 1){
     	Robot.gateLifter.up();
-    	} else if (fingerToggle == 0 || fingerToggle == 2){
-    		Robot.gateLifter.stop();
-    } else if 
-    
-    (fingerToggle == -1)
-    {
-    	Robot.gateLifter.down();
-    }
-   	
+	    } else if (fingerToggle == -1) {
+		    Robot.gateLifter.down();
+		} else if (fingerToggle == 0 || fingerToggle == 2){
+	    	Robot.gateLifter.stop();
+	    } 	
     }
 
     // Called repeatedly when this Command is scheduled to run
-    protected void execute() {
-
-    
+    protected void execute() {    
     }
+    
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return isTimedOut();
@@ -69,7 +70,7 @@ public static int fingerToggle;
 
     // Called once after isFinished returns true
     protected void end() {
-//    	Robot.gateLifter.stop();
+    // Robot.gateLifter.stop();
 
     }
    
