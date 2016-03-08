@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc5265.Robot01.Robot;
+import org.usfirst.frc5265.Robot01.RobotMap;
 
 /**
  *
@@ -43,30 +44,28 @@ public class Shoot extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-
-    	log();
-    	Robot.ballShooter.on(shooterPower);
+      	 shooterPower = SmartDashboard.getNumber("shooter power");
+      	 shooterTime = SmartDashboard.getNumber("shooter time");
+      	RobotMap.ballShooterShooting.setSafetyEnabled(false);         	
+     	Robot.ballShooter.on(shooterPower);
 
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-
-    	Robot.ballShooter.on(shooterPower);
-    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
     	Timer.delay(shooterTime);
-    	return isTimedOut();
+    	Robot.ballShooter.stop();
+    	RobotMap.ballShooterShooting.setSafetyEnabled(true);         	
+     	return true;
     }
 
     // Called once after isFinished returns true
     protected void end() {
-    
-  //  Robot.ballShooter.stop();
-    }
+   }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
@@ -74,12 +73,5 @@ public class Shoot extends Command {
     	end();
     }
     
-    public void log() {
-   	 shooterPower = SmartDashboard.getNumber("shooter power", 1);
-
-    	shooterTime = SmartDashboard.getNumber("shooter time", 1);
-    	
-    	SmartDashboard.putNumber("shooter power", 1);
-    	SmartDashboard.putNumber("shooter time", 1);
-    }
+ 
 }
