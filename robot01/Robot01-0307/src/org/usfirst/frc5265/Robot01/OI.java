@@ -107,7 +107,7 @@ public class OI {
         SmartDashboard.putData("Shoot", new Shoot());
         SmartDashboard.putData("AutonomousGroup", new AutonomousGroup());
         SmartDashboard.putData("LiftGateUp", new LiftGateUp());
-        SmartDashboard.putData("LiftGateDown", new LiftGateDown());
+        SmartDashboard.putData("LiftGateDown", new Clamp());
         SmartDashboard.putData("Reset Ball", new ResetBall());
         SmartDashboard.putData("LiftGate", new LiftGate());
         SmartDashboard.putData("LiftGateOff", new LiftGateOff());

@@ -94,6 +94,7 @@ public class GateLifter extends Subsystem {
  		   }
  		   return fingerButton;
      }
+    
 }
 
 /*
