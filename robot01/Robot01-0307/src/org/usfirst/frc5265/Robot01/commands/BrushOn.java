@@ -44,13 +44,13 @@ public class BrushOn extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	// is the brushstate on, then make it off, or vice versa 
     	BrushState = Robot.BrushStateToggle();
+    	// test brushstate and either turn the brush motor on or off
     	if (BrushState){
     		Robot.ballIntake.on();
-    		//RobotMap.ballIntakeBrush.set(1.0);
     	} else {
     		Robot.ballIntake.stop();
-    		//RobotMap.ballIntakeBrush.set(0.0);
     	}
     	SmartDashboard.putBoolean("Brush", BrushState);
     }
@@ -66,7 +66,8 @@ public class BrushOn extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	//BallIntake.stop();
+    	// leaving this here to remind us how we goofed
+    	// BallIntake.stop();
     }
 
     // Called when another command which requires one or more of the same

@@ -80,6 +80,9 @@ public class OI {
         buttonSpin.whenPressed(new BrushOn());
         flipCamera = new JoystickButton(driveStick, 9);
         flipCamera.whenPressed(new toggleCamera());
+        
+        // disabled the below - they weren't ready to deploy and put errors on the dashboard
+        //
         /*autonomus = new JoystickButton(driveStick, 32);
         autonomus.whenPressed(new AutonomousGroup());
         // buttonStop = new JoystickButton(driveStick, 27);

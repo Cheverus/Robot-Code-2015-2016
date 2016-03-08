@@ -38,6 +38,8 @@ public class GoForward extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	
+    	// let's move this to the kicker
     	double speedValue = Robot.driveBase.FindThrottle(0);
     	
     }

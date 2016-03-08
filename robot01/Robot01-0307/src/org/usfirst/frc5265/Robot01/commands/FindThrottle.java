@@ -44,10 +44,16 @@ public class FindThrottle extends Command {
     public double returnThrottle() {
     	// get throttle setting, -1 < throttle value < 1, and convert to speed for the motor
     	double speedValue = Robot.oi.valueThrottle();
-    	// convert that value to going backward between 10% and 100%
+    	// convert that value from just moving to full throttle
+    	//
+    	// change the -1 to +1 value to 0 to +2
     	speedValue = speedValue + 1;
+    	// now change to a value between 0 and +1
     	speedValue = speedValue/2;
+    	// the throttle is now 0 at the top and +1 at the bottom
+    	// this reverses that to +1 at the top and 0 at the bottom
     	speedValue = 1-speedValue;
+    	// 0.36 barely moves the robot. This conversion makes 0 = just moving and 1 = full throttle
     	speedValue = .64*speedValue + .36;
     	return speedValue;
     }

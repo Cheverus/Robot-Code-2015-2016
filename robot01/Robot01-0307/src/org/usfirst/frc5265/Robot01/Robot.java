@@ -146,6 +146,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         // ************ radical impact code ************ 
         // camera stuff next two lines
+        // takes an image and sends it to the CameraServer which puts it on the desktop 
         NIVision.IMAQdxGrab(camSession, img, 1);
 		CameraServer.getInstance().setImage(img);    
     }
@@ -159,17 +160,21 @@ public class Robot extends IterativeRobot {
     
     // ************ radical impact code ************ 
     
+    // inverts the current state of the brush motor to toggle it off and on
     public static boolean BrushStateToggle() {
     	BrushState = !BrushState;
     	return BrushState;
     }
     
+    // do we need this???
     public void updateStatus() {
     	
     }
     
  
-    
+    // camFront is the MS 5000, camBack is the MS 3000, and camAlt is the Logitech spare
+    // open both front and back cameras, initialize to the front camera
+    // 
     public void cameraInit() {
 		try {
 			img = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
@@ -182,6 +187,9 @@ public class Robot extends IterativeRobot {
 		}
     }
     
+    // flips the camera from front to back or vice versa
+    // first stops the camera session, then starts it with the new camera
+    // 
     public static void cameraFlip() {
     	try {
     		NIVision.IMAQdxStopAcquisition(camSession);
