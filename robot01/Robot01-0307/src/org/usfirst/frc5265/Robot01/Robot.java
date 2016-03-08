@@ -57,6 +57,7 @@ public class Robot extends IterativeRobot {
     static int camSession;
     static int camFrontNumb;
     static int camBackNumb;
+
     Image img;
     
     /**
