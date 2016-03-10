@@ -51,7 +51,7 @@ public class BallIntake extends Subsystem {
     }
     
     public static void on(){
-    	brush.set(1);
+    	brush.set(0.1);
     	SmartDashboard.putNumber("brush on", brush.get());
     	
     }
