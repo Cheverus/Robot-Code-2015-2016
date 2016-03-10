@@ -80,7 +80,7 @@ public class RobotMap {
         driveBaseRobotDrive.setMaxOutput(1.0);
 
         // invert this motor
-        ballIntakeBrush = new Victor(2);
+        ballIntakeBrush = new Victor(3);
         
         LiveWindow.addActuator("Ball Intake", "Brush", (Victor) ballIntakeBrush);
         
@@ -97,7 +97,7 @@ public class RobotMap {
         ballShooterShooting.setSensitivity(0.5);
         ballShooterShooting.setMaxOutput(1.0);
 
-        gateLifterGateLifterVictor = new Victor(3);
+        gateLifterGateLifterVictor = new Victor(2);
         LiveWindow.addActuator("Gate Lifter", "Gate Lifter Victor", (Victor) gateLifterGateLifterVictor);
         
         // This is for stopping the finger from going to far up or down
