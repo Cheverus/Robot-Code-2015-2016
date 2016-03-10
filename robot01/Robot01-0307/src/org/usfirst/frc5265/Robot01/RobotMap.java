@@ -79,7 +79,9 @@ public class RobotMap {
         driveBaseRobotDrive.setSensitivity(0.5);
         driveBaseRobotDrive.setMaxOutput(1.0);
 
+        // invert this motor
         ballIntakeBrush = new Victor(2);
+        
         LiveWindow.addActuator("Ball Intake", "Brush", (Victor) ballIntakeBrush);
         
         ballShooterleftvictor = new Victor(0);

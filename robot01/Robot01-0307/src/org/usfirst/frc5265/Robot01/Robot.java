@@ -57,6 +57,7 @@ public class Robot extends IterativeRobot {
     static int camSession;
     static int camFrontNumb;
     static int camBackNumb;
+    public static boolean invertDrive = false;
 
     Image img;
     
@@ -94,7 +95,7 @@ public class Robot extends IterativeRobot {
 	    //SmartDashboard.putNumber("POT value", potDisplay.pidGet());
         cameraInit();
     }
-
+    
     /**
      * This function is called when the disabled button is hit.
      * You can use it to reset subsystems before shutting down.
