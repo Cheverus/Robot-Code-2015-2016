@@ -85,18 +85,18 @@ public class OI {
         // final placement
         flipCamera = new JoystickButton(driveStick, 5);
         flipCamera.whenPressed(new toggleCamera());
-<<<<<<< HEAD
-        gateDown = new JoystickButton(driveStick, 10);
-        gateDown.whileHeld(new Clamp());
+
+        //gateDown = new JoystickButton(driveStick, 10);
+        //gateDown.whileHeld(new Clamp());
         ReverseBotButton = new JoystickButton(driveStick, 11);
         ReverseBotButton.whenPressed(new ReverseBot());
-=======
+
         // final placement
         // inversion will be button 6
         
         btnClamp = new JoystickButton(driveStick, 10);
         btnClamp.whenPressed(new Clamp());
->>>>>>> origin/master
+
         // disabled the below - they weren't ready to deploy and put errors on the dashboard
         //
         /*autonomus = new JoystickButton(driveStick, 32);
