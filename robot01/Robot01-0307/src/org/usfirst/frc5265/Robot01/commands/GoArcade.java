@@ -42,7 +42,11 @@ public class GoArcade extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveBase.GoArcade(Robot.oi.getDriveStick());
+    	//if (!Robot.invertDrive) {
+    		Robot.driveBase.GoArcade(Robot.oi.getDriveStick());
+    	//} else {
+    		//Robot.driveBase.GoArcade(Robot.oi.driveStick.getY(), Robot.oi.driveStick.getX());
+    	//}
     }
 
     // Make this return true when this Command no longer needs to run execute()
