@@ -1,11 +1,12 @@
 package org.usfirst.frc5265.Robot01.commands;
 
 import org.usfirst.frc5265.Robot01.Robot;
+import org.usfirst.frc5265.Robot01.RobotMap;
+
 import edu.wpi.first.wpilibj.Joystick;
 import org.usfirst.frc5265.Robot01.commands.*;
-
 import edu.wpi.first.wpilibj.command.Command;
-
+import org.usfirst.frc5265.Robot01.subsystems.*;
 /**
  *
  */
@@ -39,6 +40,11 @@ public class ReverseBot extends Command {
         		if (reverse){
         			xPos = -xPos;
         			yPos = -yPos; 
+        			Robot.driveBase.leftFrontMotor.getSpeed();
+        			Robot.driveBase.rightFrontMotor.getSpeed();
+        			Robot.driveBase.rightRearMotor.getSpeed();
+        			Robot.driveBase.leftRearMotor.getSpeed();
+        			
         			}
     }
     
