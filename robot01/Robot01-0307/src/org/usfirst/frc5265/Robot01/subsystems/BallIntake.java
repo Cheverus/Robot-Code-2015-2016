@@ -52,14 +52,14 @@ public class BallIntake extends Subsystem {
     
     public static void on(){
     	brush.set(-0.95);
-    	SmartDashboard.putNumber("brush on", brush.get());
+    	//SmartDashboard.putNumber("brush on", brush.get());
     	
     }
     
     public static void stop(){
     	
     	brush.set(0);
-    	SmartDashboard.putNumber("brush off", brush.get());
+    	//SmartDashboard.putNumber("brush off", brush.get());
     	
     }
     

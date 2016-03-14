@@ -128,7 +128,7 @@ public class OI {
         SmartDashboard.putData("Shoot", new Shoot());
         SmartDashboard.putNumber("auto speed", Robot.autoSpeed);
         SmartDashboard.putNumber("auto time", Robot.autoTime);
-        //SmartDashboard.putData("AutonomousGroup", new AutonomousGroup());
+        SmartDashboard.putData("flip camera", new toggleCamera());
         //SmartDashboard.putData("LiftGateUp", new LiftGateUp());
         //SmartDashboard.putData("Clamp", new Clamp());
         //SmartDashboard.putData("Reset Ball", new ResetBall());
