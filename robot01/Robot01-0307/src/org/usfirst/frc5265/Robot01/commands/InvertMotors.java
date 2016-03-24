@@ -1,5 +1,7 @@
 package org.usfirst.frc5265.Robot01.commands;
 
+/*
+
 import org.usfirst.frc5265.Robot01.Robot;
 import org.usfirst.frc5265.Robot01.RobotMap;
 
@@ -10,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
+/*
 public class InvertMotors extends Command {
 
    /*public InvertMotors() {
@@ -24,16 +27,25 @@ public class InvertMotors extends Command {
     }*/
 
     // Called just before this Command runs the first time
-    protected void initialize() {
+  /*  
+   * 
+   * 
+   * protected void initialize() {
+   */
 
-    }
+//    }
 
     // Called repeatedly when this Command is scheduled to run
-    protected void execute() {
-    }
+  /* 
+   * 
+   *  protected void execute() {
+}
+   */
+
+    
 
     // Make this return true when this Command no longer needs to run execute()
-    protected boolean isFinished() {
+  /*  protected boolean isFinished() {
         return false;
     }
 
@@ -44,5 +56,8 @@ public class InvertMotors extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+*/
+/*
     }
 }
+*/

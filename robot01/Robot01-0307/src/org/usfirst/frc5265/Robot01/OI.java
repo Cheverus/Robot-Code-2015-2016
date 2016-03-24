@@ -82,7 +82,7 @@ public class OI {
      //   gateUp.whenPressed(new LiftGateUp());
         // final placement
         buttonSpin = new JoystickButton(driveStick, 2);
-        buttonSpin.whenPressed(new BrushOn());
+        buttonSpin.whenPressed(new IntakeOn());
         // final placement
         flipCamera = new JoystickButton(driveStick, 5);
         flipCamera.whenPressed(new toggleCamera());
@@ -124,7 +124,7 @@ public class OI {
         //SmartDashboard.putData("GoArcade", new GoArcade());
         //.putData("GoStop", new GoStop());
         //SmartDashboard.putData("FindThrottle", new FindThrottle());
-        SmartDashboard.putData("BrushOn", new BrushOn());
+        SmartDashboard.putData("BrushOn", new IntakeOn());
         SmartDashboard.putData("Shoot", new Shoot());
         SmartDashboard.putNumber("auto speed", Robot.autoSpeed);
         SmartDashboard.putNumber("auto time", Robot.autoTime);

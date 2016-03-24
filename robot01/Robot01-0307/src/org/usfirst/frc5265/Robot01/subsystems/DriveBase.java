@@ -77,27 +77,28 @@ public class DriveBase extends Subsystem {
     	robotDrive.tankDrive(speed, speed);
     }
     
-    public void GoBackward(double speed) {
-    	robotDrive.tankDrive(-speed, -speed);
-    }
+//    public void GoBackward(double speed) {
+//    	robotDrive.tankDrive(-speed, -speed);
+//    }
     
     public void GoDrive(double speedLeft, double speedRight) {
     	robotDrive.tankDrive(speedLeft, speedRight);
     }
     
-    public void GoStop(double speed) {
-    	robotDrive.tankDrive(0, 0);
-    }
+//    public void GoStop(double speed) {
+//    	robotDrive.tankDrive(0, 0);
+//    }
+//    
     
     public void drive(double left, double right) {
 		robotDrive.tankDrive(left, right);
 	}
     
-    public double FindThrottle(double speedValue){
+ /* public double FindThrottle(double speedValue){
     	Robot.driveBase.GoBackward(speedValue);
     	return speedValue;
     }
     
-   
+   */
 }
 

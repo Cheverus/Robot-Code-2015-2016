@@ -50,6 +50,7 @@ public class autoForward extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	//remove this
     	RobotMap.driveBaseRobotDrive.tankDrive(Robot.autoSpeed, Robot.autoSpeed);
     }
 

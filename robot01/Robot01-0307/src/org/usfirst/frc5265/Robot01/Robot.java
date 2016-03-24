@@ -179,11 +179,11 @@ public class Robot extends IterativeRobot {
     
 
     
-    public static long detectTime()
+    /* public static long detectTime()
     {
     	return Calendar.getInstance().getTimeInMillis();
     }
-    
+    */
     /**
      * This function is called periodically during operator control
      */
@@ -208,11 +208,14 @@ public class Robot extends IterativeRobot {
     // ************ radical impact code ************ 
     
     // inverts the current state of the brush motor to toggle it off and on
-   public static boolean BrushStateToggle() {
+/* V.P 3/24
+ * 
+ *   public static boolean BrushStateToggle() {
     	BrushState = !BrushState;
     	return BrushState;
    
     }
+    */
     public static boolean ReverseStateToggle() {
     	reverse = !reverse;
     	return reverse; 
